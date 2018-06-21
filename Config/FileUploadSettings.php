@@ -1,4 +1,6 @@
 <?php
+if(!class_exists('FileUploadSettings')) 
+{
 class FileUploadSettings {
 
   /**
@@ -58,7 +60,7 @@ class FileUploadSettings {
       * the uploaded files saved to.  default: webroot/files which means
       * webroot/files must exist and set to chmod 777
       */
-    'uploadDir' => "files",
+    'uploadDir' => "img/upload",
     
     /**
       * Component and Behavior Setting.
@@ -190,5 +192,6 @@ class FileUploadSettings {
     'fileNameFunction' => false
   );
 
+}
 }
 ?>

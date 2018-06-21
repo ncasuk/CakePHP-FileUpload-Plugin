@@ -142,11 +142,11 @@ class FileUploadComponent extends Component{
   /**
     * Initializes FileUploadComponent for use in the controller
     *
-    * @param object $controller A reference to the instantiating controller object
+    * @param object $controller A (reference to the) instantiating controller object
     * @return void
     * @access public
     */
-  function initialize(&$controller){
+  function initialize(Controller $controller){
     $this->data = $controller->data;
     $this->params = $controller->params;
     
@@ -158,11 +158,11 @@ class FileUploadComponent extends Component{
   /**
     * Main execution method.  Handles file upload automatically upon detection and verification.
     *
-    * @param object $controller A reference to the instantiating controller object
+    * @param object $controller A (reference to the) instantiating controller object
     * @return void
     * @access public
     */
-  function startup(&$controller){
+  function startup(Controller $controller){
     //Backporting 4.0 to 3.6.3 //using setting attributes is now deprecated.
     $this->fileModel = $this->fileModel();
     $this->fileVar = $this->fileVar();
